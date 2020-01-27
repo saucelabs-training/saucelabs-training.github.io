@@ -38,12 +38,12 @@
     <h3>Starting and Stopping a Sauce Session</h3>
 
     <ol>
-        <li><a href="https://saucelabs.com/sign-up" target="_blank">Sign up for a Trial Sauce Labs Account</a></li>
+        <li>If you don't already have a Sauce Labs account, <a href="https://saucelabs.com/sign-up" target="_blank">Sign
+            up for a Trial Sauce Labs Account</a></li>
         <li>Locate your <a href="https://app.saucelabs.com/user-settings" target="_blank">Sauce Labs Credentials</a>
         <li>Paste the credentials where it says "yourusername" and "00000000-0000-0000-0000-000000000000"
-        <li>Use the <a href="https://wiki.saucelabs.com/display/DOCS/Platform+Configurator" target="_blank">Platform
-            Configurator</a>
-            to create your desired combination
+        <li>Use the <a href="https://wiki.saucelabs.com/display/DOCS/Platform+Configurator" target="_blank">Platform Configurator</a>
+            to create your desired combination (for example select the following)
             <ul>
                 <li>W3C</li>
                 <li>PC</li>
@@ -51,29 +51,30 @@
                 <li>Chrome 78</li>
                 <li>Advanced Configuration --> 1024x768</li>
             </ul>
-        <li>Click the "Ruby" tab at the bottom of the page</li>
-        <li>Copy/Paste the "capabilities" code over the <code>capabilities</code> line</li>
-        <li>In the terminal at the bottom, type: <code>ruby sauce_example.rb</code> and hit enter</li>
-        <li><a href="https://app.saucelabs.com/dashboard/tests" target="_blank">Look at the job on the Dashboard</a>
+        <li>At the bottom of the Platform Configurator page, click the "Ruby" tab to see the resulting code</li>
+        <li>Copy/Paste the "capabilities" code over the <code>capabilities</code> line in your Gitpod environment</li>
+        <li>In the terminal at the bottom of the Gitpod environment, type: <code>ruby sauce_example.rb</code> and hit
+            enter
+        </li>
+        <li><a href="https://app.saucelabs.com/dashboard/tests" target="_blank">Look at the Dashboard to see the job
+            running</a>
         </li>
     </ol>
 
     <h3>Adding Sauce Labs Options</h3>
 
     <ol>
-        <li>Look at the <a href="https://docs.saucelabs.com/reference/test-configuration/" target="_blank">Test
-            Configuration Options</a></li>
+        <li>Go to the <a href="https://docs.saucelabs.com/reference/test-configuration/" target="_blank">Test
+            Configuration Options page</a></li>
         <li>Scroll down to the very bottom</li>
-        <li>In the far right column of the last row, copy extendedDebugging information</li>
-        <li>In the <code>sauce_example.rb</code> file, after the <code>1024x768</code>, hit "enter" and paste the
-            extendedDebugging line
-        </li>
-        <li>Uncomment the test and build information</li>
-        <li>Copy those 3 lines; Click right after "true" after extendedDebugging line and paste</li>
-        <li>Uncomment the code for finding elements and submitting results</li>
-        <li>In the terminal, run: <code>ruby sauce_example.rb</code></li>
-        <li><a href="https://app.saucelabs.com/dashboard/tests" target="_blank">Look at the job on the Dashboard</a>
-        </li>
+        <li>In the far right column of the second to last row, copy the <code>"extendedDebugging": true</code> information</li>
+        <li>In Gitpod, after the <code>"1024x768",</code>, hit "enter" and paste the extended debugging text</li>
+        <li>type a comma after the extended debugging text and hit enter</li>
+        <li>Uncomment the name and build lines of code by deleting the pound (<code>#</code>) sign at the beginning</li>
+        <li>Copy those 2 lines and paste them into the capabilities code</li>
+        <li>Uncomment the rest of the code at the bottom for finding elements and submitting results</li>
+        <li>In the terminal, type: <code>ruby sauce_example.rb</code> and hit enter</li>
+        <li><a href="https://app.saucelabs.com/dashboard/tests" target="_blank">Look at the Dashboard to see the job running</a></li>
     </ol>
 </div>
 </body>
